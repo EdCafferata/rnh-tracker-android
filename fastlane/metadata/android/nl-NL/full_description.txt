@@ -1,0 +1,15 @@
+RNH Tracker is een gratis GPX-tracker, oorspronkelijk gemaakt voor de Ronde om Noord-Holland — handig voor iedereen die zijn route wil vastleggen op het water of onderweg.
+
+🗺️ MEERDERE KAARTLAGEN
+Kies uit OpenStreetMap, Carto DB, OpenTopoMap en Carto DB Dark Matter, met optioneel OpenSeaMap-vaarwegmarkeringen erbovenop.
+
+📍 LIVE GPS-TRACKING
+Start/stop je track met één druk op de knop, zie live afstand en snelheid, en sla je route op als standaard GPX-bestand.
+
+📤 EXPORTEREN EN DELEN
+Elke opgenomen track wordt opgeslagen als .gpx-bestand, klaar om te delen of te importeren in andere navigatie-apps.
+
+💶 GRATIS
+Geen abonnement, geen betaalmuur, geen account nodig.
+
+Alles blijft op je eigen toestel — er is geen eigen server en geen tracking van jou als gebruiker.

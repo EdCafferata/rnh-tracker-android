@@ -1,0 +1,1 @@
+Eerste release: kaartlagen (OSM, Carto DB, OpenTopoMap, OpenSeaMap), live GPS-tracking en GPX-export/delen.

@@ -1,0 +1,1 @@
+Initial release: map layers (OSM, Carto DB, OpenTopoMap, OpenSeaMap), live GPS tracking, and GPX export/share.
