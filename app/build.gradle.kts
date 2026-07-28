@@ -15,9 +15,19 @@ android {
         versionName = "1.0.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(project.findProperty("RNHTRACKER_STORE_FILE") as String)
+            storePassword = project.findProperty("RNHTRACKER_STORE_PASSWORD") as String
+            keyAlias = project.findProperty("RNHTRACKER_KEY_ALIAS") as String
+            keyPassword = project.findProperty("RNHTRACKER_KEY_PASSWORD") as String
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
