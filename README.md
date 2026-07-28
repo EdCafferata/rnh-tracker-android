@@ -1,5 +1,7 @@
 # RNH Tracker (Android)
 
+🔒 Laatste security check: 2026-07-28 23:01 CEST
+
 Android port of [RNH GPX Tracker](https://github.com/EdCafferata/RNH-GpxTracker) (internally `OpenRHNTracker`), a free GPX tracker originally built for the Ronde om Noord-Holland.
 
 This is a rebrand of [BVK Tracker Android](https://github.com/EdCafferata/bvk-tracker-android) — the iOS app is itself a clone of BVK GPX Tracker, so the Android port follows the same pattern: same architecture, different branding, colors, and default map location. See that repo's README for the shared Milestone 1 feature list and the full multi-milestone roadmap (weather/water-level overlays, scale bar, preferences, Wear OS companion — none of that is ported yet, on either BVK or RNH Android).
