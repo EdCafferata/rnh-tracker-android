@@ -1,6 +1,6 @@
 # RNH Tracker (Android)
 
-🔒 Laatste security check: 2026-09-09 10:40 CEST
+🔒 Laatste security check: 2026-09-11 21:24 CEST
 
 Android port of [RNH GPX Tracker](https://github.com/EdCafferata/RNH-GpxTracker) (internally `OpenRHNTracker`), a free GPX tracker originally built for the Ronde om Noord-Holland.
 
