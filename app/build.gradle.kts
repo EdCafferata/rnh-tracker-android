@@ -17,10 +17,12 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file(project.findProperty("RNHTRACKER_STORE_FILE") as String)
-            storePassword = project.findProperty("RNHTRACKER_STORE_PASSWORD") as String
-            keyAlias = project.findProperty("RNHTRACKER_KEY_ALIAS") as String
-            keyPassword = project.findProperty("RNHTRACKER_KEY_PASSWORD") as String
+            if (project.hasProperty("RNHTRACKER_STORE_FILE")) {
+                storeFile = file(project.findProperty("RNHTRACKER_STORE_FILE") as String)
+                storePassword = project.findProperty("RNHTRACKER_STORE_PASSWORD") as String
+                keyAlias = project.findProperty("RNHTRACKER_KEY_ALIAS") as String
+                keyPassword = project.findProperty("RNHTRACKER_KEY_PASSWORD") as String
+            }
         }
     }
 
