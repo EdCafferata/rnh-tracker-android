@@ -21,19 +21,23 @@ enum class TileServer(
         maximumZ = 19,
         tileSize = 256,
     ),
+    // Let op: de 3 CARTO_*-cases serveren sinds okt 2026 Esri keyless basemaps.
+    // Carto heeft z'n gratis keyless basemaps afgeknepen ("API KEY REQUIRED"), daarom
+    // vervangen door Esri (keyless, geen account). Case-namen + volgorde ongewijzigd
+    // gelaten zodat opgeslagen gebruikersvoorkeuren (TileServerInt) niet verschuiven.
     CARTO_DB(
-        displayName = "Carto DB",
-        urlTemplate = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
-        subdomains = listOf("a", "b", "c"),
-        maximumZ = 21,
+        displayName = "Wegenkaart (Esri)",
+        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+        subdomains = emptyList(),
+        maximumZ = 19,
         tileSize = 256,
     ),
     CARTO_DB_RETINA(
-        displayName = "Carto DB (Retina)",
-        urlTemplate = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",
-        subdomains = listOf("a", "b", "c"),
-        maximumZ = 21,
-        tileSize = 512,
+        displayName = "Licht grijs (Esri)",
+        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+        subdomains = emptyList(),
+        maximumZ = 16,
+        tileSize = 256,
     ),
     OPEN_TOPO_MAP(
         displayName = "OpenTopoMap",
@@ -43,10 +47,10 @@ enum class TileServer(
         tileSize = 256,
     ),
     CARTO_DB_DARK(
-        displayName = "Carto DB Dark Matter",
-        urlTemplate = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
-        subdomains = listOf("a", "b", "c"),
-        maximumZ = 21,
+        displayName = "Donker grijs (Esri)",
+        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+        subdomains = emptyList(),
+        maximumZ = 16,
         tileSize = 256,
     ),
     OPEN_SEA_MAP(
