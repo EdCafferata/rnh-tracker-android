@@ -21,10 +21,10 @@ enum class TileServer(
         maximumZ = 19,
         tileSize = 256,
     ),
-    // Let op: de 3 CARTO_*-cases serveren sinds okt 2026 Esri keyless basemaps.
-    // Carto heeft z'n gratis keyless basemaps afgeknepen ("API KEY REQUIRED"), daarom
-    // vervangen door Esri (keyless, geen account). Case-namen + volgorde ongewijzigd
-    // gelaten zodat opgeslagen gebruikersvoorkeuren (TileServerInt) niet verschuiven.
+    // CARTO_DB serveert sinds okt 2026 een Esri keyless basemap (Carto heeft z'n gratis
+    // keyless basemaps afgeknepen: "API KEY REQUIRED"). Esri = keyless, geen account.
+    // De grijze Esri-canvas-lagen ("Licht grijs"/"Donker grijs") zijn okt 2026 verwijderd
+    // (op verzoek Ed): alleen tegels tot z16 en te weinig beeld boven water.
     CARTO_DB(
         displayName = "Wegenkaart (Esri)",
         urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
@@ -32,25 +32,11 @@ enum class TileServer(
         maximumZ = 19,
         tileSize = 256,
     ),
-    CARTO_DB_RETINA(
-        displayName = "Licht grijs (Esri)",
-        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        subdomains = emptyList(),
-        maximumZ = 16,
-        tileSize = 256,
-    ),
     OPEN_TOPO_MAP(
         displayName = "OpenTopoMap",
         urlTemplate = "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
         subdomains = listOf("a", "b", "c"),
         maximumZ = 17,
-        tileSize = 256,
-    ),
-    CARTO_DB_DARK(
-        displayName = "Donker grijs (Esri)",
-        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        subdomains = emptyList(),
-        maximumZ = 16,
         tileSize = 256,
     ),
     OPEN_SEA_MAP(

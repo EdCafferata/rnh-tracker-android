@@ -53,6 +53,9 @@ fun OsmMapView(
         // die lieten de app crashen bij +/- in deze Compose-opzet. We bieden hieronder
         // eigen +/- knoppen aan die veilig controller.zoomIn()/zoomOut() aanroepen.
         mapView.zoomController.setVisibility(CustomZoomButtonsController.Visibility.NEVER)
+        // Begrens hoe ver je mag inzoomen (~40m-schaal, gelijk aan iOS). Zo kom je niet
+        // voorbij het punt waar nog bruikbaar kaartbeeld is.
+        mapView.setMaxZoomLevel(18.0)
         mapView.controller.setZoom(13.0)
         mapView.controller.setCenter(RNH_ROUTE_START)
         mapView.overlays.add(trackLine)
