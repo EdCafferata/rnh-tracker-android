@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -60,6 +61,11 @@ private fun RnhApp() {
         }
         permissionLauncher.launch(permissions.toTypedArray())
     }
+
+    // System back button: from the file list go back to the tracker instead of
+    // finishing the Activity (which closed the app). The tracker is the root,
+    // so there back still exits as before.
+    BackHandler(enabled = showFileList) { showFileList = false }
 
     if (showFileList) {
         FileListScreen(
