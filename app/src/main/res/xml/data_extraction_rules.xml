@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Back-up-regels voor Android 12+. Cloud-back-up alleen als die end-to-end versleuteld kan; overzetten naar een nieuw toestel gaat lokaal. -->
+<data-extraction-rules>
+    <cloud-backup disableIfNoEncryptionCapabilities="true">
+        <include domain="sharedpref" path="." />
+        <include domain="file" path="." />
+        <exclude domain="file" path="osmdroid" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="." />
+        <include domain="file" path="." />
+        <exclude domain="file" path="osmdroid" />
+    </device-transfer>
+</data-extraction-rules>
